@@ -1,0 +1,185 @@
+{
+  "$schema": "../schema.json",
+  "title": "245 QRScout",
+  "page_title": "AdamBots Crescendo",
+  "sections": [
+    {
+      "name": "Pre Interview",
+      "preserveDataOnReset": true,
+      "fields": [
+        {
+          "title": "Scouter Initials",
+          "type": "text",
+          "required": true,
+          "code": "scouter"
+        },
+        {
+          "title": "Team Number",
+          "type": "number",
+          "required": true,
+          "code": "teamNumber"
+        }
+      ]
+    },
+    {
+      "name": "Autonomous",
+      "fields": [
+        {
+          "title": "Amp Notes",
+          "type": "number",
+          "required": true,
+          "code": "autoAmp"
+          },
+        {
+          "title": "Speaker Notes",
+          "type": "number",
+          "required": true,
+          "code": "autoSpeaker"
+        },
+	{
+          "title": "Path Taken",
+          "type": "text",
+          "required": false,
+          "code": "path"
+	},
+	{
+          "title": "Pick-Up Note Locations",
+          "type": "text",
+          "required": false,
+          "code": "picknote"
+	},
+	{
+          "title": "Start Location",
+          "type": "number",
+          "required": false,
+          "code": "startLoc"
+	},
+	{
+	  "title": "Consistency in Auton (1-10)",
+          "type": "number",
+          "required": false,
+          "code": "autoConsist"
+	}
+      ]
+    },
+    {
+      "name": "Teleop",
+      "fields": [
+        {
+          "title": "Human Player at Amp",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": false,
+          "code": "humanPlayer"
+        },
+        {
+          "title": "Can your Human Player Score?",
+          "type": "select",
+          "required": false,
+          "code": "humanPlayerScore",
+          "defaultValue": "Rarely",
+          "choices": {
+            "100": "100%",
+            "50": ">50%",
+            "25": "25-50%",
+            "0": "Rarely"
+        }},
+        {
+          "title": "Amp Notes",
+          "type": "number",
+          "defaultValue": 0,
+          "required": false,
+          "code": "ampNotes"
+        },
+        {
+          "title": "Speaker Notes",
+          "type": "number",
+          "defaultValue": 0,
+          "required": false,
+          "code": "speakerNotes"
+	},
+        {
+	  "title": "Shooting Efficiency [made/missed (%)]",
+          "type": "number",
+          "required": false,
+          "code": "shootEffect"
+	},
+	{
+	  "title": "Cycle Time to Score (sec)",
+          "type": "number",
+          "required": false,
+          "code": "cycleTimeTele"
+	},
+	{
+          "title": "Coorpertition",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": false,
+          "code": "coop"
+	},
+	{
+	  "title": "Amplify Stategy?",
+          "type": "text",
+          "required": false,
+          "code": "ampStat"
+	},
+        {
+	  "title": "Melody Strategy?",
+          "type": "text",
+          "required": false,
+          "code": "melodyStrat"
+	}
+      ]
+    },
+    {
+      "name": "Stage",
+      "fields": [  
+  	{
+            "title": "Stage Ability (1-10)",
+            "type": "number",
+            "required": false,
+            "code": "stageAbility"
+  	},
+          {
+            "title": "Harmony Ability?",
+            "type": "boolean",
+            "required": false,
+            "defaultValue": false,
+            "code": "harmony"
+  	},
+  	{
+  	  "title": "Trap Ablity",
+            "type": "boolean",
+            "defaultValue": false,
+            "required": false,
+            "code": "trap"
+  	},
+  	{
+  	  "title": "Ensemble Strategy?",
+            "type": "text",
+            "required": false,
+            "code": "enembleStrat"
+  	}
+      ]
+    },
+    {
+      "name": "Post Interview",
+      "fields": [
+        {
+          "code": "comments",
+          "title": "Comments",
+          "type": "text",
+          "min": 0,
+          "max": 250,
+          "required": false
+        },
+        {
+          "title": "likeable (1-10)",
+          "type": "number",
+          "required": true,
+          "code": "likeable"
+	}
+      ]
+    }
+  ]
+}
